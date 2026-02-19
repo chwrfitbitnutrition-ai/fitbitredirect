@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+
+      if (code) {
+        window.location.href =
+          "https://automated-calorie-tracking-djamie.apps.cloudapps.unc.edu/registrationRedirect?code=" +
+          encodeURIComponent(code);
+      } else {
+        document.body.innerText = "Missing authorization code.";
+      }
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
