@@ -6,19 +6,13 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       const code = params.get("code");
-
-      console.log("Raw redirect URL:", window.location.href);
-      console.log("search:", window.location.search);
-      console.log("hash:", window.location.hash);
-      console.log("code:", code);
-
-      // if (code) {
-      //   window.location.href =
-      //     "https://automated-calorie-tracking-djamie.apps.cloudapps.unc.edu/registrationRedirect?code=" +
-      //     encodeURIComponent(code);
-      // } else {
-      //   document.body.innerText = "Missing authorization code.";
-      // }
+      if (code) {
+        window.location.href =
+          "https://automated-calorie-tracking-djamie.apps.cloudapps.unc.edu/registrationRedirect?code=" +
+          encodeURIComponent(code);
+      } else {
+        document.body.innerText = "Missing authorization code.";
+      }
     </script>
   </head>
   <body>
